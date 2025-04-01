@@ -1,0 +1,11 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import PageComponent from '../components/PageComponent.astro';
+
+type Props = CollectionEntry<'project'>['data'];
+
+const { title, description } = Astro.props;
+---
+<PageComponent title={title} description={description}>
+<slot />
+</PageComponent>

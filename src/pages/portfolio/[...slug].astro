@@ -1,0 +1,31 @@
+---
+import { type CollectionEntry, getCollection } from "astro:content";
+import ProjectItem from "../../layouts/ProjectItem.astro"
+import AdminPortfolioItem from "../../../tina/pages/AdminPortfolioItem";
+import client from "../../../tina/__generated__/client";
+import SEOComponent from "../../components/SEOProjectComponent.astro";
+
+export async function getStaticPaths() {
+	const workitems = await getCollection("project");
+
+	return workitems.map((item) => ({
+		params: { slug: item.id },
+		props: {
+			item,
+			getTinaProps: async () =>
+				client.queries.project({
+					relativePath: item.data.tinaInfo.relativePath,
+				}),
+		},
+	}));
+}
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site); 
+const { item, getTinaProps } = Astro.props;
+const tinaProps = await getTinaProps();
+---
+
+<SEOComponent data={tinaProps} canonicalURL={canonicalURL}/>
+<ProjectItem {...tinaProps}>
+     <AdminPortfolioItem {...tinaProps} client:tina />
+</ProjectItem>

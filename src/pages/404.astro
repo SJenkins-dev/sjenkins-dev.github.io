@@ -1,0 +1,14 @@
+---
+import client from '../../tina/__generated__/client';
+import Page from "../../tina/pages/Page.tsx";
+import PageComponent from '../components/PageComponent.astro';
+import SEOComponent from '../components/SEOPageComponent.astro';
+const data = await client.queries.page({relativePath: "error.mdx"});
+const canonicalURL = new URL(Astro.url.pathname, Astro.site); 
+---
+<SEOComponent data={data} canonicalURL={canonicalURL}/>
+<PageComponent>
+<Page {...data} client:tina />
+</PageComponent>
+
+
