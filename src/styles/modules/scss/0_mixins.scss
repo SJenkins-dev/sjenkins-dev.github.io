@@ -1,0 +1,17 @@
+@mixin screen($point) {
+    @if $point == 2xl {
+      @media screen and (width >= 96rem) { @content; }
+    }
+    @if $point == xl {
+      @media screen and (width >= 80rem) { @content; }
+    }
+    @if $point == lg {
+      @media screen and (width >= 64rem) { @content; }
+    }
+    @else if $point == md {
+      @media screen and (width >= 48rem) { @content; }
+    }
+    @else if $point == sm {
+      @media screen and (width >= 40rem)  { @content; }
+    }
+  }
