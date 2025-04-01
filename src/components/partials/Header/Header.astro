@@ -1,0 +1,38 @@
+---
+import HeaderLink from "./HeaderLink.astro";
+import config from "../../../content/config/config.json";
+import {Logo} from "../../svg/logo.jsx";
+import {Moon} from "../../svg/moon.jsx";
+import {Sun} from "../../svg/sun.jsx";
+import { useEffect } from "react";
+---
+<header class="site-header">
+	<a class="skip-to-main-content" href="#main-content">
+		Skip to content
+	  </a>
+	<div class="site-wrapper">
+			<figure class="logo">
+			<Logo/>
+			<a href="/"><h1>{config.seo.title}</h1></a>
+			</figure>
+	
+		<nav class="navigation" role="navigation">
+		<ul class="internal-links">
+			{
+				config.nav.map((nav) => (
+					<HeaderLink href={nav.link}>{nav.title}</HeaderLink>
+				))
+			}
+		</ul>
+		</nav>
+		
+		<div class="theme-switcher">
+			<button id="theme-toggle" aria-label="Switch to dark mode" class="switch">
+				<Sun/>
+				<Moon/>
+			</button>
+			</div>
+	</div>
+</header>
+
+

@@ -1,0 +1,17 @@
+---
+import config from '../../content/config/config.json';
+import client from '../../../tina/__generated__/client';
+import Page from "../../../tina/pages/Page.tsx";
+import PortfolioLoop from '../../components/partials/Portfolio/PortfolioLoop.astro';
+import PageComponent from '../../components/PageComponent.astro';
+import SEOComponent from '../../components/SEOPageComponent.astro';
+const data = await client.queries.page({relativePath: "portfolio_index.mdx"});
+const canonicalURL = new URL(Astro.url.pathname, Astro.site); 
+---
+		<SEOComponent data={data} canonicalURL={canonicalURL}/>
+		<PageComponent title={config.seo.title} description={config.seo.description}>
+		<main>
+		<Page {...data} client:tina />
+		<PortfolioLoop />
+		</main>	
+		</PageComponent>
