@@ -1,5 +1,4 @@
 import type { Collection } from "tinacms";
-import { defaultSeoPageProps, seoPageProps } from "@pcode-at/tinacms-seo";
 
 export const PageCollection: Collection = {
   name: "page",
@@ -78,6 +77,5 @@ export const PageCollection: Collection = {
       isBody: true,
       required: true
     },
-    seoPageProps,
   ]
 }

@@ -1,26 +1,17 @@
 ---
 const { data, canonicalURL } = Astro.props;
 import { AstroSeo } from '@astrolib/seo';
-const seo = {...data.data.page.seo};
-const opengraph = {...data.data.page.seo?.openGraph};
-const twitter = {...data.data.page.seo?.twitter};
 ---
 
 <AstroSeo
-		title={seo.title},
-		description={seo.description},
+		title={data.data.page.title},
+		description={data.data.page.description},
 		canonical={canonicalURL},
 		openGraph={{
 		  url: canonicalURL,
-		  type: opengraph.type,
-		  title: opengraph.title,
-		  description: opengraph.description,
-		  site_name: opengraph.siteName,
-		  images: opengraph.images,
-		}}
-		twitter={{
-		  handle: twitter.handle,
-		  site: twitter.site,
-		  cardType: twitter.cardType,
+		  type: "website",
+		  title: data.data.page.title,
+		  description: data.data.page.description,
+		  site_name: data.data.page.title,
 		}}
 	  />

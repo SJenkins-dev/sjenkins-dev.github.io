@@ -1,0 +1,63 @@
+{
+  "$ref": "#/definitions/project",
+  "definitions": {
+    "project": {
+      "type": "object",
+      "properties": {
+        "tinaInfo": {
+          "type": "object",
+          "properties": {
+            "filename": {
+              "type": "string"
+            },
+            "basename": {
+              "type": "string"
+            },
+            "path": {
+              "type": "string"
+            },
+            "relativePath": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "filename",
+            "basename",
+            "path",
+            "relativePath"
+          ],
+          "additionalProperties": false
+        },
+        "title": {
+          "type": "string"
+        },
+        "thumbImgSrc": {
+          "type": "string"
+        },
+        "thumbImgAlt": {
+          "type": "string"
+        },
+        "client": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "body": {},
+        "$schema": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "tinaInfo",
+        "title",
+        "thumbImgSrc",
+        "thumbImgAlt",
+        "client",
+        "description"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}
