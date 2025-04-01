@@ -7,7 +7,7 @@
     "build": "tinacms build && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "tinacms": "tinacms",
+    "tinacms": "tinacms"
   },
   "dependencies": {
     "web-vitals": "^3.1.0",
