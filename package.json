@@ -10,6 +10,7 @@
     "tinacms": "tinacms",
   },
   "dependencies": {
+    "web-vitals": "^3.1.0",
     "@astrojs/mdx": "^4.2.0",
     "@astrojs/react": "^4.2.1",
     "@astrojs/rss": "^4.0.11",
