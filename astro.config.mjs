@@ -21,9 +21,6 @@ export default defineConfig({
          smoothScrolling: true,
          progress: true,
          })],
-    redirects: {
-        '/admin': '/admin/index.html'
-      },
       vite: { 
         plugins: [tailwindcss()],  
     }
