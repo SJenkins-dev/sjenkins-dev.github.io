@@ -91,10 +91,10 @@
         @apply max-w-[35ch];
         @apply font-barlow;
         @apply font-semibold;
-        @include vr(text5xl);
+        @include vr(text4xl);
 
         @include screen(lg){
-            @include vr(text6xl);
+            @include vr(text5xl);
         }
       }
 
@@ -311,6 +311,7 @@
  /* ------------------------------- */  
 
  .copyright-footer {
+    small {@include vr(textxs);}
     a p {
         @apply text-center;
         @apply font-lato;

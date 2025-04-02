@@ -34,7 +34,7 @@
   .site-wrapper {
     @apply flex;
     @apply flex-col;
-    @apply px-16;
+    @apply px-8;
     @apply relative;
     @apply container;
     @apply mx-auto;
@@ -387,14 +387,14 @@
     @apply max-w-[35ch];
     @apply font-barlow;
     @apply font-semibold;
-    @apply text-5xl;
-    @apply mt-[0.5000em];
+    @apply text-4xl;
+    @apply mt-[0.6667em];
     @apply mb-0;
   }
   @media screen and (width >= 64rem) {
     .hero-section .hero-title, .hero-section .project-title, .hero-section.portfolio .hero-title, .hero-section.portfolio .project-title {
-      @apply text-6xl;
-      @apply mt-[0.4000em];
+      @apply text-5xl;
+      @apply mt-[0.5000em];
       @apply mb-0;
     }
   }
@@ -509,16 +509,16 @@
     @apply max-w-[35ch];
     @apply font-barlow;
     @apply font-semibold;
-    @apply text-5xl;
-    @apply mt-[0.5000em];
+    @apply text-4xl;
+    @apply mt-[0.6667em];
     @apply mb-0;
     @apply text-center;
     @apply mx-auto;
   }
   @media screen and (width >= 64rem) {
     .contact-form .form-title {
-      @apply text-6xl;
-      @apply mt-[0.4000em];
+      @apply text-5xl;
+      @apply mt-[0.5000em];
       @apply mb-0;
     }
   }
@@ -621,6 +621,11 @@
   /* ------------------------------- */
   /* NAVIGATION*/
   /* ------------------------------- */
+  .copyright-footer small {
+    @apply text-xs;
+    @apply mt-[2.0000em];
+    @apply mb-0;
+  }
   .copyright-footer a p {
     @apply text-center;
     @apply font-lato;
