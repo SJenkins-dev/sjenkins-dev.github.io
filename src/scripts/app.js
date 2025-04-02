@@ -28,7 +28,6 @@ function preloadPageContent(){
     }
 
     const onClick = () => {
-      console.log('clicked');
       // flip current value
       theme.value = theme.value === 'light'
         ? 'dark'
