@@ -956,6 +956,123 @@
 @layer base {
   /* DEFAULTS
   /* ------------------------------- */
+  body {
+    @apply bg-pampas-50;
+  }
+  .logoSVG {
+    @apply fill-matcha-600;
+  }
+  .copyright-footer {
+    @apply bg-pampas-200;
+  }
+  .hero-section, .hero-section.portfolio {
+    @apply bg-matcha-200;
+    @apply bg-linear-to-t/oklch from-pampas-100 via-biscuit-200 via-matcha-200  to-sky-300;
+  }
+  .card {
+    @apply bg-gray-50;
+    @apply border-shark-100;
+  }
+  .tag-block li, .contact-form input, .contact-form textarea {
+    @apply bg-pampas-50;
+    @apply border-pampas-300;
+    @apply text-pampas-800;
+  }
+  .portfolio-list .card:hover, .portfolio-list .card:focus-within {
+    @apply border-shark-100;
+  }
+  .card .project-title, .card .skill-name {
+    @apply text-shark-950;
+  }
+  .card .project-description, .card .skill-description, .card figcaption, .card label {
+    @apply text-shark-700;
+  }
+  .project-client-name {
+    @apply text-matcha-600;
+  }
+  .hero-title, .project-title, .form-title {
+    @apply text-shark-950;
+  }
+  .hero-title strong, .project-title strong, .form-title strong {
+    @apply bg-matcha-600;
+    @apply bg-linear-to-br/oklch from-sky-500 to-matcha-600;
+  }
+  .hero-lede, .hero-section.portfolio .project-description {
+    @apply text-shark-700;
+  }
+  .project-deliverables strong, .project-timeframe strong {
+    @apply text-matcha-600;
+  }
+  .project-deliverables p, .project-timeframe p {
+    @apply text-shark-700;
+  }
+  .skills-section h3 {
+    @apply text-shark-950;
+  }
+  .skills-section .intro p {
+    @apply text-shark-700;
+  }
+  .case-study h3 {
+    @apply text-shark-950;
+  }
+  .case-study p, .case-study ul li {
+    @apply text-shark-700;
+  }
+  .case-study li::marker {
+    @apply text-matcha-600;
+  }
+  .case-study blockquote {
+    @apply bg-matcha-600;
+    @apply bg-linear-to-br/oklch from-sky-500 to-matcha-600;
+  }
+  .case-study blockquote::before, .case-study blockquote:after {
+    @apply text-pampas-200;
+  }
+  .copyright-footer a p, .copyright-footer .site-wrapper small {
+    @apply text-shark-950;
+  }
+  .contact-form {
+    @apply bg-linear-to-b/oklch from-pampas-50 to-pampas-200;
+  }
+  .contact-form input, .contact-form textarea {
+    @apply transition-all;
+  }
+  .btn.primary.filled {
+    @apply bg-matcha-600;
+    @apply text-pampas-50;
+    @apply border-b-matcha-900;
+  }
+  .btn.primary.filled:hover, .btn.primary.filled:active, .btn.primary.filled:focus {
+    @apply bg-matcha-700;
+    @apply border-matcha-900;
+    @apply border-b-matcha-900;
+  }
+  .btn.secondary.filled {
+    @apply bg-biscuit-600;
+    @apply text-pampas-50;
+    @apply border-b-biscuit-900;
+  }
+  .btn.secondary.filled:hover, .btn.secondary.filled:active, .btn.secondary.filled:focus {
+    @apply bg-biscuit-700;
+    @apply border-biscuit-900;
+    @apply border-b-biscuit-900;
+  }
+  #theme-toggle {
+    @apply bg-pampas-50;
+  }
+  #theme-toggle .sun, #theme-toggle .moon {
+    @apply fill-matcha-600;
+  }
+  .prose a, .site-header .internal-links a, .skills-section .intro p a {
+    @apply text-shark-950;
+  }
+  .prose a:after, .site-header .internal-links a:after, .skills-section .intro p a:after {
+    @apply bg-matcha-600;
+    @apply bg-linear-to-br/oklch from-sky-500 to-matcha-600;
+  }
+  .prose a:hover, .prose a:active, .prose a:focus, .site-header .internal-links a:hover, .site-header .internal-links a:active, .site-header .internal-links a:focus, .skills-section .intro p a:hover, .skills-section .intro p a:active, .skills-section .intro p a:focus {
+    @apply text-matcha-600;
+  }
   @media (prefers-color-scheme: dark) {
     body {
       @apply bg-gray-900;
@@ -1032,7 +1149,7 @@
     .case-study blockquote::before, .case-study blockquote:after {
       @apply text-gray-950;
     }
-    .copyright-footer a p {
+    .copyright-footer a p, .copyright-footer .site-wrapper small {
       @apply text-shark-100;
     }
     .contact-form {
@@ -1155,7 +1272,7 @@
   html[data-theme=light] .case-study blockquote::before, html[data-theme=light] .case-study blockquote:after {
     @apply text-pampas-200;
   }
-  html[data-theme=light] .copyright-footer a p {
+  html[data-theme=light] .copyright-footer a p, html[data-theme=light] .copyright-footer .site-wrapper small {
     @apply text-shark-950;
   }
   html[data-theme=light] .contact-form {
@@ -1275,7 +1392,7 @@
   html[data-theme=dark] .case-study blockquote::before, html[data-theme=dark] .case-study blockquote:after {
     @apply text-gray-950;
   }
-  html[data-theme=dark] .copyright-footer a p {
+  html[data-theme=dark] .copyright-footer a p, html[data-theme=dark] .copyright-footer .site-wrapper small, html[data-theme=dark] .copyright-footer .site-wrapper small a {
     @apply text-shark-100;
   }
   html[data-theme=dark] .contact-form {

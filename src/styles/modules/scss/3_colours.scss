@@ -113,7 +113,7 @@ blockquote {
 }
 
 .copyright-footer {
-a p {@apply text-#{$light-HeadingColour};}
+a p, .site-wrapper small{@apply text-#{$light-HeadingColour};}
 }
 
 .contact-form{@apply bg-linear-to-b/oklch from-#{$light-BGColour} to-#{$light-BGColourMidTone};
@@ -245,7 +245,7 @@ a {
     }
     
     .copyright-footer {
-        a p {@apply text-#{$dark-HeadingColour};}
+        a p, .site-wrapper small {@apply text-#{$dark-HeadingColour};}
     }
     
     .contact-form{@apply bg-linear-to-b/oklch from-#{$dark-BGColour} to-#{$dark-BGColourMidTone};
@@ -385,7 +385,7 @@ html[data-theme=light] {
 }
 
 .copyright-footer {
-    a p {@apply text-#{$light-HeadingColour};}
+    a p, .site-wrapper small {@apply text-#{$light-HeadingColour};}
 }
 
 .contact-form{@apply bg-linear-to-b/oklch from-#{$light-BGColour} to-#{$light-BGColourMidTone};
@@ -520,7 +520,7 @@ html[data-theme=dark]{
     }
     
     .copyright-footer {
-        a p {@apply text-#{$dark-HeadingColour};}
+        a p, .site-wrapper small, .site-wrapper small a {@apply text-#{$dark-HeadingColour};}
     }
     
     .contact-form{@apply bg-linear-to-b/oklch from-#{$dark-BGColour} to-#{$dark-BGColourMidTone};
