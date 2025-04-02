@@ -40,6 +40,137 @@
 
 /* DEFAULTS
 /* ------------------------------- */  
+
+body{@apply bg-#{$light-BGColour};}
+.logoSVG {
+    @apply fill-#{$light-PrimaryTextAccent};
+}
+
+.copyright-footer{
+    @apply bg-#{$light-BGColourMidTone};
+}
+
+.hero-section, .hero-section.portfolio {
+    @apply bg-matcha-200; 
+    @apply bg-linear-to-t/oklch from-pampas-100 via-biscuit-200 via-matcha-200  to-sky-300;  
+}
+
+
+.card {
+        @apply bg-#{$light-CardBG};
+        @apply border-#{$light-CardBorder};
+}
+
+.tag-block li, .contact-form input, .contact-form textarea {
+        @apply bg-#{$light-BGColour};
+        @apply border-#{$light-TagBorder};
+        @apply text-#{$light-TagText};
+}
+
+.portfolio-list {
+    .card:hover, .card:focus-within {
+        @apply border-#{$light-CardBorder};
+    }
+}
+
+
+.card {
+.project-title, .skill-name { @apply text-#{$light-HeadingColour};}
+.project-description, .skill-description, figcaption, label {@apply text-#{$light-LedeColour};}
+}
+
+
+.project-client-name {@apply text-#{$light-PrimaryTextAccent};}
+
+.hero-title, .project-title, .form-title {@apply text-#{$light-HeadingColour};
+strong {@include day-matcha-gradient;}
+}
+
+.hero-lede, .hero-section.portfolio .project-description {@apply text-#{$light-LedeColour};}
+
+.project-deliverables, .project-timeframe {
+strong {@apply text-#{$light-PrimaryTextAccent};}
+p { @apply text-#{$light-LedeColour};}
+}
+
+.skills-section {
+h3 {@apply text-#{$light-HeadingColour}; }
+.intro p { @apply text-#{$light-LedeColour};}
+}
+
+.case-study {
+h3 {@apply text-#{$light-HeadingColour};}
+p, ul li {@apply text-#{$light-LedeColour};}
+li::marker {@apply text-#{$light-PrimaryTextAccent};}
+
+blockquote {
+    @include day-matcha-gradient();
+
+    &::before, &:after {@apply text-#{$light-BGColourMidTone}
+}
+
+}
+}
+
+.copyright-footer {
+a p {@apply text-#{$light-HeadingColour};}
+}
+
+.contact-form{@apply bg-linear-to-b/oklch from-#{$light-BGColour} to-#{$light-BGColourMidTone};
+input, textarea { @apply transition-all;}
+}
+
+.btn.primary{
+
+&.filled {
+    @apply bg-matcha-600;
+    @apply text-pampas-50;
+    @apply border-b-matcha-900;
+
+    &:hover, &:active, &:focus {
+        @apply bg-matcha-700; 
+        @apply border-matcha-900;
+        @apply border-b-matcha-900;}
+    }
+
+    
+}
+
+.btn.secondary {
+&.filled {
+    @apply bg-biscuit-600;
+    @apply text-pampas-50;
+    @apply border-b-biscuit-900;
+
+    &:hover, &:active, &:focus {
+        @apply bg-biscuit-700; 
+        @apply border-biscuit-900;
+        @apply border-b-biscuit-900;
+    }
+}
+
+}
+
+#theme-toggle{@apply bg-#{$light-BGColour};
+
+.sun, .moon {@apply fill-#{$light-PrimaryTextAccent};}
+
+}
+
+.prose, .site-header .internal-links, .skills-section .intro p {
+
+a {
+    @apply text-#{$light-HeadingColour};
+
+&:after{@include day-matcha-gradient();}
+
+    &:hover, &:active, &:focus {
+        @apply text-#{$light-PrimaryTextAccent};
+    }
+
+}
+}
+
 @media (prefers-color-scheme: dark){
     body{@apply bg-#{$dark-BGColour};}
 

@@ -4,8 +4,7 @@ import { AstroSeo } from '@astrolib/seo';
 ---
 
 <AstroSeo
-		title={data.data.page.title},
-		description={data.data.page.description},
+		title={data.data.page.seotitle},
 		canonical={canonicalURL},
 		openGraph={{
 		  url: canonicalURL,
