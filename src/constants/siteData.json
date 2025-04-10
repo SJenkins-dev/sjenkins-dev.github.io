@@ -1,0 +1,54 @@
+{
+
+    "default": {
+  
+      "name": "Stacey Jenkins | Design and Illustration",
+  
+      "title": "Stacey Jenkins | Design and Illustration - Portfolio",
+  
+      "description": "Stacey Jenkins is a multidisciplinary designer and illustrator specialising in digital product design, front-end development and digital illustration.",
+  
+      "openGraph": {
+  
+        "title": "Stacey Jenkins | Design and Illustration - Portfolio",
+  
+        "description": "Stacey Jenkins is a multidisciplinary designer and illustrator specialising in digital product design, front-end development and digital illustration.",
+  
+        "type": "website",
+  
+        "url": "https://www.staceyjenkins.co.uk",
+  
+        "image": "https://www.staceyjenkins.co.uk/thumb.png"
+  
+      },
+  
+      "twitter": {
+  
+        "title": "Stacey Jenkins | Design and Illustration - Portfolio",
+  
+        "description": "Stacey Jenkins is a multidisciplinary designer and illustrator specialising in digital product design, front-end development and digital illustration."
+  
+      }
+  
+    },
+  
+    "pages": {
+  
+      "about": {
+  
+        "title": "About Stacey Jenkins",
+  
+        "description": "Multidisciplinary designer and illustrator, specialising in digital product design, front-end development and digital illustration. Let's connect!"
+  
+      },
+
+      "portfolio": {
+  
+        "title": "Stacey Jenkins | Design and Illustration - Portfolio",
+  
+        "description": "Portfolio of Stacey Jenkins, multidisciplinary designer and illustrator, specialising in digital product design, front-end development and digital illustration."
+  
+      }
+    }
+  
+  }
