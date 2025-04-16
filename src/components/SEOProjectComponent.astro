@@ -1,17 +1,18 @@
 ---
 const { data, canonicalURL } = Astro.props;
 import { AstroSeo } from '@astrolib/seo';
+import SiteData from "../constants/siteData.json";
 ---
 
 <AstroSeo
-		title={data.data.project.title},
+		title=`${data.data.project.title} - ${data.data.project.client} - ${SiteData.default.title}`,
 		description={data.data.project.description},
 		canonical={canonicalURL},
 		openGraph={{
 		  url: canonicalURL,
 		  type: "website",
-		  title: data.data.project.title,
+		  title: `${data.data.project.title} - ${data.data.project.client} - ${SiteData.default.title}`,
 		  description: data.data.project.description,
-		  site_name: data.data.project.title,
+		  site_name: SiteData.default.title,
 		}}
 	  />

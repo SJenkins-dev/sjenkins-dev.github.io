@@ -3,7 +3,7 @@ import { type CollectionEntry, getCollection } from "astro:content";
 import ProjectItem from "../../layouts/ProjectItem.astro"
 import AdminPortfolioItem from "../../../tina/pages/AdminPortfolioItem";
 import client from "../../../tina/__generated__/client";
-import SEOComponent from "../../components/SEOProjectComponent.astro";
+import SEOProjectComponent from "../../components/SEOProjectComponent.astro";
 
 export async function getStaticPaths() {
 	const workitems = await getCollection("project");
@@ -19,13 +19,11 @@ export async function getStaticPaths() {
 		},
 	}));
 }
-
-const canonicalURL = new URL(Astro.url.pathname, Astro.site); 
 const { item, getTinaProps } = Astro.props;
 const tinaProps = await getTinaProps();
 ---
 
-<SEOComponent data={tinaProps} canonicalURL={canonicalURL}/>
+<SEOProjectComponent data={tinaProps}/>
 <ProjectItem {...tinaProps}>
      <AdminPortfolioItem {...tinaProps} client:tina />
 </ProjectItem>

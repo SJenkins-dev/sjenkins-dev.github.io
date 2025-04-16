@@ -2,9 +2,8 @@
 import { getCollection } from "astro:content";
 import client from "../../tina/__generated__/client";
 import Page from "../../tina/pages/Page";
-import config from '../content/config/config.json';
 import PageComponent from '../components/PageComponent.astro';
-import SEOComponent from '../components/SEOPageComponent.astro';
+import SiteData from "../constants/siteData.json";
 
 export async function getStaticPaths() {
 	const page = await getCollection("page");
@@ -21,10 +20,11 @@ export async function getStaticPaths() {
 
 const { getTinaProps } = Astro.props;
 const data = await getTinaProps();
-const canonicalURL = new URL(Astro.url.pathname, Astro.site); 
 ---
-<SEOComponent data={data} canonicalURL={canonicalURL}/>
-		<PageComponent>
+		<PageComponent seo={{
+		  title: SiteData.pages.about.title,
+		  description: SiteData.pages.about.description
+		}}>
 			<Page {...data} client:tina />
 		</PageComponent>
 
